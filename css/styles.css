@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: left;
+    
+}
+
+
+.header {
+    color: red;
+    margin: 20px;
+    
+}
+
+
+.task_title {
+    display: flex;
+    margin: 20px;
+    width: 300px;
+    padding: 10px;
+
+}
+
+.task_input {
+    display: flex;
+    margin: 20px;
+    width: 300px;
+    padding: 10px;
+    padding-bottom: 100px;
+
+}
+
+.add_btn {
+   
+    display: flex;
+    margin: 20px;
+    
+    
+}
