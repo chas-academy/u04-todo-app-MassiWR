@@ -1,3 +1,13 @@
+<?php 
+
+    // Allow the config
+    define('__CONFIG__', true);
+    // Set error reporting on
+    error_reporting(-1);
+    ini_set('display', 'on');
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
