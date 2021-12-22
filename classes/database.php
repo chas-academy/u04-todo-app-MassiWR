@@ -1,9 +1,7 @@
 <?php 
-
 if(!defined('__CONFIG__')) {
-    exit('You do not have a config file'); 
+    exit('File not found'); 
 }
-
 class database {
 
     protected static $connection;

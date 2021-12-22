@@ -2,6 +2,7 @@
 
     // Allow the config
     define('__CONFIG__', true);
+    require_once "config.php";
     // Set error reporting on
     error_reporting(-1);
     ini_set('display', 'on');
@@ -21,6 +22,7 @@
 </head>
 <body>
     
+ 
     <section class="container">
     <form method="post" action="" class="input_form">
 
@@ -28,12 +30,14 @@
         <h1>To do list</h1>
     </section>
 
-    <input type="text" name="title" class="task_title" placeholder="Title">
+    <input type="text" name="title" class="task_title" placeholder="Task">
+    <button type="submit" name="submit" id="add_btn" class="add_desc">Add description</button>
     <input type="text" name="task" class="task_input" placeholder="Task description">
     <button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
     </form>
     </section>
 
+    <script src="js/main.js"></script>
 
 </body>
 </html>

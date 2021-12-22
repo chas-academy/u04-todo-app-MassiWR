@@ -1,8 +1,8 @@
 <?php 
-    
     // If there is no constant defined called __CONFIG__, do not load this file
     if(!defined('__CONFIG__')) {
-        exit('You do not have a config file'); 
+        exit('File not found'); 
+        
     }
 
     // Allow errors
@@ -13,6 +13,9 @@
     include_once "classes/database.php";
     // Object of the database class
     $connection = database::getConnection(); 
+
+    // Include the functions file
+    include_once "functions.php";
 
 
 ?>
