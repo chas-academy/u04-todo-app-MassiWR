@@ -2,8 +2,8 @@
 if(!defined('__CONFIG__')) {
     exit('File not found'); 
 }
-class database {
 
+class database {
     protected static $connection;
     private function __construct() {
         $host = '127.0.0.1';
@@ -17,8 +17,11 @@ class database {
             self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             self::$connection->setAttribute(PDO::ATTR_PERSISTENT, false);
         }
-        catch(PDOException $e) {
-            echo "Could not connect to database."; exit;
+        catch(PDOException $event) {
+            echo "Could not connect to database"; 
+            throw new \PDOException($event->getMessage(), (int)$event->getCode());
+            exit;
+            
         }
     }
 
