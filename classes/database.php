@@ -1,6 +1,6 @@
 <?php 
 if(!defined('__CONFIG__')) {
-    exit('File not found'); 
+    header("Location: ../index.php");
 }
 
 class database {
@@ -33,3 +33,5 @@ class database {
         return self::$connection;
     }
 }
+
+

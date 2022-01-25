@@ -1,10 +1,20 @@
 
-$(".task_input").hide();
-jQuery(document).ready(function() {
-    $("#add-btn-desc").click( function() {
-        $(".task_input").toggle(500);  
-        $("#add-btn-desc").hide();
-        return false;  
+  $(document).ready(function(){
+    $('.remove-to-do').click(function(){
+        const id = $(this).attr('user_id');
+        
+        $.post("/delete.php", 
+              {
+                  id: id
+              },
+              (data)  => {
+                 if(data){
+                     $(this).parent().hide(600);
+                 }
+              }
+        );
     });
+
+       
 });
 

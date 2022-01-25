@@ -1,7 +1,12 @@
 <?php 
 
-function template_header($title) {
-echo <<<EOT
+if(!defined('__CONFIG__')) {
+    header("Location: index.php");
+}
+
+
+function print_header($title) {
+echo<<<HEADER
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,16 +19,20 @@ echo <<<EOT
 
 </head>
 
-<body>
 
-EOT;
+<body>
+   
+
+HEADER;
 }
 
-function template_footer() {
-echo <<<EOT
+function print_footer() {
+echo <<<FOOTER
+
     <script src="js/main.js"></script>
     </body>
 </html>
-EOT;
+
+FOOTER;
 }
 ?>
