@@ -2,6 +2,12 @@
 
 include_once "classes/database.php";
 
+function Redirect($url, $permanent = false)
+{
+    header('Location: ' . $url, true, $permanent ? 301 : 302);
+
+    exit();
+}
 
 
     $connection = database::getConnection();
@@ -15,7 +21,6 @@ include_once "classes/database.php";
 
     }
 
-   
 
 
 ?>

@@ -1,6 +1,9 @@
-<?=print_header('Update')?>
-<?=print_footer()?>
- 
-
 <?php 
+
+require_once "config.php";
+
+?>  
+
+
+ 
 
