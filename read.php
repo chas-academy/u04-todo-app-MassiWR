@@ -14,6 +14,8 @@ include_once "config.php";
                     <section class="title"><?php echo $rows['title'];?></section>
                     <section class="task"><?php echo $rows['task'];?></section>            
                     </div>
+                    
                 <?php }
                 ?>
        </div>
+
