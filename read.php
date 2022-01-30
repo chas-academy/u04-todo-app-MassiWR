@@ -21,6 +21,8 @@ foreach(get_task_list() as $item) {
         echo $item['title'] .  "<br>" .  $item['task'];
         ?>
     </section> <?php 
+    
 } 
 ?>
+
 

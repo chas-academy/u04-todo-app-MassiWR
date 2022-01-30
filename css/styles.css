@@ -194,3 +194,10 @@ text-transform: uppercase;
   
 }
   
+.error_message {
+    width: 100%;
+    color: blanchedalmond;
+    margin: 0px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
