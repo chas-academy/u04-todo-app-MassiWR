@@ -29,7 +29,6 @@ HEADER;
 function print_footer() {
 echo <<<FOOTER
 
-    <script src="js/main.js"></script>
     </body>
 </html>
 

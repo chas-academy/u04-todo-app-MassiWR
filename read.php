@@ -4,18 +4,23 @@ if(!defined('__CONFIG__')) {
 }
 include_once "config.php";
 
+function get_task_list() {
     $connection = database::getConnection();
-    $read = $connection->query("SELECT * FROM todolist ORDER BY user_id DESC");
+    try {
+        return $connection->query('SELECT user_id, title, task, checked FROM todolist');
+    } catch(Exception $e) {
+        echo "ERROR!: " . $e->getMessage() . "</br>";
+        return array();
+        }
+}
+
+foreach(get_task_list() as $item) {
     ?>
-       <div class="show-todo-section">
-            <?php while($rows = $read->fetch(PDO::FETCH_ASSOC)) { 
-                ?>
-                    <div class="todo-item">
-                    <section class="title"><?php echo $rows['title'];?></section>
-                    <section class="task"><?php echo $rows['task'];?></section>            
-                    </div>
-                    
-                <?php }
-                ?>
-       </div>
+    <section class="todo-item">
+        <?php 
+        echo $item['title'] .  "<br>" .  $item['task'];
+        ?>
+    </section> <?php 
+} 
+?>
 
