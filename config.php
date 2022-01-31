@@ -1,7 +1,7 @@
 <?php 
-    // If there is no constant defined called __CONFIG__, do not load this file
+    // If there is no constant defined called __CONFIG__, do not load this file, redirect to index.php
     if(!defined('__CONFIG__')) {
-        exit('Error 404');
+        header('Location: index.php');
     }
 
     // Allow errors
@@ -9,7 +9,7 @@
     ini_set('display_errors', 'on');
     
     // Include the database.php file
-    include_once "classes/database.php";
+    include_once "database/database.php";
     // Connection object of the database class
     $connection = database::getConnection(); 
 

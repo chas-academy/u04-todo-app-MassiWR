@@ -1,7 +1,4 @@
 <?php 
-if(!defined('__CONFIG__')) {
-    exit('file not found');
-}
 include_once "config.php";
 
 function get_task_list() {

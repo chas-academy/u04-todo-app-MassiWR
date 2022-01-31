@@ -37,13 +37,8 @@ function add_tasks($title, $task) {
 }
 
 
-
-
-
 ?>
 
-
-    
     <section class="container">
     <section class="add_container">
     <section class="header-title">TODO APP</section>

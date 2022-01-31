@@ -1,8 +1,6 @@
 <?php 
 
-if(!defined('__CONFIG__')) {
-    header("Location: index.php");
-}
+require_once "config.php";
 
 
 function print_header($title) {
