@@ -10,9 +10,7 @@
     
     // Include the database.php file
     include_once "database/database.php";
-    // Connection object of the database class
-    $connection = database::getConnection(); 
-
+  
     // Include the function and crud files
     include_once "functions.php";
     include_once "update.php";

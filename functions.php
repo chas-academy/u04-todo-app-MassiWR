@@ -2,7 +2,6 @@
 
 require_once "config.php";
 
-
 function print_header($title) {
 echo<<<HEADER
 <!DOCTYPE html>
