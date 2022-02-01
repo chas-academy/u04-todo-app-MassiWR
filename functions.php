@@ -2,7 +2,6 @@
 
 include('config.php');
 
-
 function print_header($title) {
 echo<<<HEADER
 <!DOCTYPE html>
@@ -47,6 +46,18 @@ if(isset($_POST['add'])){
 	}
 	header('location:index.php');
 }
+
+
+//Delete
+if(isset($_GET['deleteId'])){
+	$task_id= $_GET['deleteId'];
+	$delete_record = mysqli_query($connection,"DELETE FROM todo WHERE id = '$task_id'");
+	if(!$delete_record){
+		echo "Error : ".mysqli_error($connection);
+	}
+	header('location:index.php');
+}
+
 
 
 
