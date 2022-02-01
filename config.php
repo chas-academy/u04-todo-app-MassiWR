@@ -13,10 +13,7 @@
   
     // Include the function and crud files
     include_once "functions.php";
-    include_once "update.php";
-    include_once "create.php";
-    include_once "read.php";
-    include_once "delete.php";
+    
 
 
 ?>
