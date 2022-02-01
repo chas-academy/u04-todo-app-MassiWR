@@ -3,22 +3,23 @@ html {
   }
 body {
     
-    background: hsl(56, 80%, 20%);
+  background-image: url("/images/mountains.jpg");
     
 }
   
 
 .container {
+    display: flex;
     background: transparent;
-    max-width: 500px;
+    max-width: 200px;
     width: 50%;
     height: 200px;
-    margin: 30px auto;
+    margin: 20px auto;
     border-radius: 10px;
 }
 
 .add_container {
-	width: 100%;
+	  width: 100%;
     margin: 0px auto;
     padding: 10px;
     border-radius: 5px;
@@ -30,16 +31,10 @@ body {
     opacity: 0.7;
   }
 
-
-  .show-todo-section {
-    width: 100%;
-    margin: 30px auto;
-    padding: 10px;
-    border-radius: 5px;
-  }
   
   .todo-item {
-    width: 95%;
+    display: inline-block;
+    width: 40%;
     margin: 10px auto;
     padding: 20px 10px;
     box-shadow: 0 4px 8px 0 #ccc, 0 6px 20px 0 #ccc;
@@ -48,11 +43,9 @@ body {
   }
   
 
- 
-
   .header-title {
    display: flex;
-   justify-content: center;
+   justify-content:left;
    color: azure;
    text-shadow: blanchedalmond;
    font-family: Georgia, serif;
@@ -64,24 +57,24 @@ body {
   }
 
 
-
-
 .title {
 
   font-family: sans-serif;
   color: rgb(62, 110, 7);
   text-decoration:aquamarine;
+  display: flex;
+  justify-content: center;
+  text-align: center;
  
-
-  
 }
 
 .task {
-
+  
   font-family: sans-serif;
   font-style: italic;
-  padding: 20px;
-
+  height: 50px;
+  text-align: center;
+ 
 }
 
 
@@ -90,6 +83,7 @@ input[type=checkbox]:checked + label.strikethrough{
 }
 
 button {
+  display: flex;
   background: none;
   color: #ffa260;
   border: 2px solid;
@@ -100,3 +94,5 @@ button {
 
  
 }
+
+

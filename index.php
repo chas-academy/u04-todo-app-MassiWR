@@ -36,8 +36,9 @@
 
                 ?>
                 <input type="checkbox" name="packersOff" id="packers" value="1"/>
-                <label for="packers" class="strikethrough"><?php echo $row['title'] . "<br />"; ?><?php 
-				 echo $row['task']; ?>
+                <label for="packers" class="strikethrough">
+                    <section class="heading-title"><?php echo $row['title'] . "<br />"; ?></section>
+                    <section class="heading-task"><?php echo $row['task'] . "<br />"; ?></section>
                  </label> 
 				<a href="?deleteId=<?php echo $row['id']; ?>"><button class="raise">Delete</button></a>
 				<a href="?editId=<?php echo $row['id']; ?>"><button class="raise">Edit</button></a>
