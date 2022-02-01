@@ -1,26 +1,18 @@
 html {
     font-family: 'helvetica neue', helvetica, arial, sans-serif;
   }
-
 body {
     
-    background-image: url("/images/mountains.jpg");
-    background-size:auto;
+    background: hsl(56, 80%, 20%);
     
-  }
-  
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
 }
-
+  
 
 .container {
     background: transparent;
     max-width: 500px;
-    width: 90%;
-    height: 500px;
+    width: 50%;
+    height: 200px;
     margin: 30px auto;
     border-radius: 10px;
 }
@@ -32,53 +24,6 @@ body {
     border-radius: 5px;
 }
 
-.show-error {
-
-    width: 100%;
-    color: blanchedalmond;
-    margin: 0px auto;
-    padding: 10px;
-    border-radius: 5px;
-
-}
-
-.add_container .task_input{
-    display: block;
-    width: 95%;
-    height: 40px;
-    margin: 10px auto;
-    border: 2px solid rgb(83, 53, 53);
-    font-size: 16px;
-    border-radius: 5px;
-    padding: 0px 5px;
-  }
-
-  .add_container .desc_input {
-    display: block;
-    width: 95%;
-    height: 80px;
-    margin: 10px auto;
-    border: 2px solid rgb(83, 53, 53);
-    font-size: 16px;
-    border-radius: 5px;
-    padding: 0px 5px;
-  }
-  
-
-  .add_container button {
-    display: block;
-    width: 50%;
-    height: 40px;
-    margin: 10px auto;
-    border: none;
-    outline: none;
-    background-color: rgb(5, 92, 63);
-    color: #fff;
-    font-family: sans-serif;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
 
   .add_container button:hover {
     box-shadow: 0 2px 2px 0 #ccc, 0 2px 3px 0 #ccc;
@@ -168,36 +113,39 @@ text-transform: uppercase;
   }
 
 
-  .title {
-    font-weight:bold;
-    color:darkcyan;
-  }
 
-  .task {
-    font-style: italic;
-  }
 
-.delete-btn {
-  display: block;
-    width: 50%;
-    height: 40px;
-    margin: 10px auto;
-    border: none;
-    outline: none;
-    background-color: blanchedalmond;
-    color: #fff;
-    font-family: sans-serif;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  
+.title {
+
+  font-family: sans-serif;
+  color: rgb(62, 110, 7);
+  text-decoration:aquamarine;
+ 
+
   
 }
-  
-.error_message {
-    width: 100%;
-    color: blanchedalmond;
-    margin: 0px auto;
-    padding: 10px;
-    border-radius: 5px;
+
+.task {
+
+  font-family: sans-serif;
+  font-style: italic;
+  padding: 20px;
+
+}
+
+
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+}
+
+button {
+  background: none;
+  color: #ffa260;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+
+ 
 }

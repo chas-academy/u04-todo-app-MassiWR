@@ -59,5 +59,27 @@ if(isset($_GET['deleteId'])){
 }
 
 
+//Edit
+if(isset($_GET['editId'])){
+	$_id= $_GET['editId'];
+	$edit_record = mysqli_query($connection,"SELECT * FROM todo WHERE id = '$_id'");
+	if(!$edit_record){
+		echo "Error : ".mysqli_error($conn);
+	}
+	$edit_record = mysqli_fetch_array($edit_record);
+}
+
+//Update
+if(isset($_POST['update'])){
+	$changeTitle= $_POST['title'];
+	$changeTask = $_POST['task'];
+	$_id= $_POST['task_id'];
+	$update_record = mysqli_query($connection,"UPDATE todo SET title = '$changeTitle', task = '$changeTask' WHERE id = '$_id'");
+	if(!$update_record){
+		echo "Error : ".mysqli_error($connection);
+	}
+	header('location:index.php');
+}
+
 
 
