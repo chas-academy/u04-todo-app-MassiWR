@@ -7,6 +7,7 @@
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.13
 
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -18,48 +19,40 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `toDoList`
+-- Database: `todo`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `todolist`
+-- Table structure for table `todo`
 --
 
-CREATE TABLE `todolist` (
-  `user_id` int(10) UNSIGNED NOT NULL COMMENT 'user id',
-  `title` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `task` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `done` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='To do table';
-
---
--- Dumping data for table `todolist`
---
-
-INSERT INTO `todolist` (`user_id`, `title`, `task`, `done`) VALUES
-(8, '', '', 0);
+CREATE TABLE `todo` (
+  `id` int(10) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `task` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `todolist`
+-- Indexes for table `todo`
 --
-ALTER TABLE `todolist`
-  ADD UNIQUE KEY `user_id` (`user_id`);
+ALTER TABLE `todo`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `todolist`
+-- AUTO_INCREMENT for table `todo`
 --
-ALTER TABLE `todolist`
-  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'user id', AUTO_INCREMENT=9;
+ALTER TABLE `todo`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

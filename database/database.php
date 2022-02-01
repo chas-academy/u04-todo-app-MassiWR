@@ -9,7 +9,7 @@ $user = 'root';
 $pass = '';
 $db = 'todo';
 
-$connection = mysqli_connect($hose,$user,$pass,$db);
+$connection = mysqli_connect($host,$user,$pass,$db);
 
 if(!$connection){
 	die('Mysql connection error : '.mysqli_connect_error());

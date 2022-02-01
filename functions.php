@@ -1,6 +1,7 @@
 <?php 
 
-require_once "config.php";
+include('config.php');
+
 
 function print_header($title) {
 echo<<<HEADER
@@ -31,4 +32,21 @@ echo <<<FOOTER
 
 FOOTER;
 }
-?>
+
+//Read
+$todo_list = mysqli_query($connection,"SELECT * FROM todo order by id desc");
+
+
+//Create 
+if(isset($_POST['add'])){
+	$createTitle= $_POST['title'];
+	$createTask = $_POST['task'];
+	$insert_record = mysqli_query($connection,"INSERT INTO todo SET title = '$createTitle', task='$createTask'");
+	if(!$insert_record){
+		echo "Error : ".mysqli_error($connection);
+	}
+	header('location:index.php');
+}
+
+
+

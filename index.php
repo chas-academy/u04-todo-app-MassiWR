@@ -2,7 +2,8 @@
     // Allow the config
     define('__CONFIG__', true);
     // require the config file
-    require_once "config.php";
+    include('database/database.php'); 
+    include('functions.php');
  
 ?>
 
@@ -13,7 +14,6 @@
 		<section class="header-title">TODO APP</section>
 			<?php if(isset($_GET['editId'])){ ?>
 			<form action="" method="post">
-					<a href="index.php" class="btn"></a></div>
 					<input type="hidden" name="row_id" value="<?php echo $edit_record['id']; ?>">
 					<input type="text" name="title" class="title_input" placeholder="Enter title" value="<?php echo $edit_record['title']; ?>" required>
 					<input type="text" name="task" class="task_input" placeholder="Enter task" value="<?php echo $edit_record['task']; ?>">
