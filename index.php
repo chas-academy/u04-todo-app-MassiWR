@@ -29,4 +29,14 @@
 			<?php } ?>
 			</section>
 			</section>
+
+            <?php while($row = mysqli_fetch_array($todo_list)) { ?>
+				<section class="todo-item"><?php 
+				echo $row['title'] . "<br />"; 
+				echo $row['task']; ?>
+				<a href="?deleteId=<?php echo $row['id']; ?>"><button>Delete</button></a>
+				<a href="?editId=<?php echo $row['id']; ?>"><button>Edit</button></a>
+				</section>
+			<?php } ?>
+
     <?=print_footer()?>
