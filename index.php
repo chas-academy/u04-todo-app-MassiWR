@@ -43,4 +43,4 @@
 				<a href="?editId=<?php echo $row['id']; ?>"><button class="raise">Edit</button></a>
 				</section>
 				<?php } ?>
-    <?=print_footer()?>
+<?=print_footer()?>
