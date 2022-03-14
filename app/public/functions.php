@@ -10,6 +10,11 @@ function print_header($title)
 
 
 
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,6 +29,8 @@ function print_header($title)
 
 
 <body>
+   <div class="main-container">
+	<h1>TODO APP</h1>
    
 
 HEADER;
@@ -33,7 +40,6 @@ function print_footer()
 
 {
     echo <<<FOOTER
-
     </body>
 </html>
 
@@ -72,6 +78,13 @@ if (isset($_GET['taskDone'])) {
     $stmt = $connection->prepare('UPDATE todos SET done = true WHERE id = :id');
     $stmt->bindValue(':id', $id);
     $stmt->execute();
+    if (headers_sent()) {
+        die("Redirect failed.");
+    }
+    else {
+        $connection = null;
+        exit(header("Location: index.php"));
+    }
 
 }
 
@@ -80,10 +93,17 @@ if (isset($_POST['update'])) {
     $changeTitle = $_POST['title'];
     $changeTask = $_POST['task'];
     $id = $_GET['editTask'];
-    $stmt = $connection->prepare('UPDATE todos SET title = :title, task = :task WHERE id = :id');
+    $stmt = $connection->prepare('UPDATE todos SET title = :title, task = :task, done = false WHERE id = :id');
     $stmt->bindParam(':id', $id);
     $stmt->bindParam(':title', $changeTitle);
     $stmt->bindParam(':task', $changeTask);
     $stmt->execute();
+    if (headers_sent()) {
+        die("Redirect failed.");
+    }
+    else {
+        $connection = null;
+        exit(header("Location: index.php"));
+    }
 
 }
