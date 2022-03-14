@@ -35,5 +35,5 @@ Docker installed and running on your machine.
    ```bash
     docker-compose up
    ```
-3. Navigate to address 127.0.0.1
-4. 
+3. Create the database table, login-credentials can be found on docker-compose.yml
+4. Navigate to address 127.0.0.1
