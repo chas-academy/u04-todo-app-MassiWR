@@ -8,13 +8,6 @@ function print_header($title)
     echo <<<HEADER
 
 
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -88,7 +81,7 @@ if (isset($_GET['taskDone'])) {
 
 }
 
-
+// update a post and set "done" to false again if it was marked as true
 if (isset($_POST['update'])) {
     $changeTitle = $_POST['title'];
     $changeTask = $_POST['task'];
